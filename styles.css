@@ -3,7 +3,7 @@
 /* Keep the invitation in view while its panels follow the scroll position. */
 :root{--header-height:72px}
 .opening-scroll{--opening-travel:72svh;height:calc(100svh - var(--header-height) + var(--opening-travel));position:relative}
-.opening-scroll .hero{position:sticky;top:0;height:calc(100svh - var(--header-height));min-height:0;max-height:none}
+.opening-scroll .hero{position:sticky;top:var(--header-height);height:calc(100svh - var(--header-height));min-height:0;max-height:none}
 .hero-photo{transform:translateZ(0) scale(var(--photo-scale,1.055));transition:none;will-change:transform;backface-visibility:hidden}
 .doors{pointer-events:none}
 .door{transition:none;will-change:transform;backface-visibility:hidden;contain:paint}
