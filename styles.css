@@ -11,7 +11,12 @@
 .door.right{transform:translate3d(0,0,0)}
 .cover-copy,.opening-seal,.cover-date{opacity:var(--cover-opacity,1);transition:none}
 .opening-seal{pointer-events:none;will-change:transform,opacity;backface-visibility:hidden}
-@media(max-width:600px){:root{--header-height:58px}.opening-scroll{--opening-travel:60svh}.opening-seal span{font-size:14px}}
+@media(max-width:600px){
+:root{--header-height:58px}
+.opening-scroll{--opening-travel:60dvh;height:calc(100dvh - var(--header-height) + var(--opening-travel))}
+.opening-scroll .hero{height:calc(100dvh - var(--header-height))}
+.opening-seal span{font-size:14px}
+}
 @media(prefers-reduced-motion:reduce){.door.left{transform:none}.door.right{transform:none}.doors{opacity:var(--cover-opacity,1)}.hero-photo{transform:none}}
 
 /* Original engagement photographs. */
